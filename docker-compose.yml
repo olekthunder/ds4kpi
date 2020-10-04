@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  base: &base
+    build: .
+    ports:
+      - "8888:8888"
+
+  lab1:
+    <<: *base
+    volumes:
+        - ./lab1:/code
+
+  lab2:
+    <<: *base
+    volumes:
+      - ./lab2:/code
+
+  lab3:
+    <<: *base
+    volumes:
+      - ./lab3:/code
+
+  lab4:
+    <<: *base
+    volumes:
+      - ./lab4:/code
